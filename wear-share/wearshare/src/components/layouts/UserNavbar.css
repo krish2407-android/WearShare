@@ -1,0 +1,246 @@
+/* Modern Navbar Styles */
+.navbar {
+    background: #ffffff;
+    height: 70px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 280px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Full width navbar when sidebar is closed */
+.navbar-full-width {
+    left: 0;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* Center Section */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Navigation Items */
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+}
+
+.nav-item:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+/* End Section */
+.navbar-end {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 0 0 auto;
+}
+
+/* Action Buttons */
+.navbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.login-btn {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.login-btn:hover {
+    background: rgba(52, 152, 219, 0.2);
+    color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.signup-btn {
+    color: #fff;
+    background: #3498db;
+    border: 1px solid #3498db;
+}
+
+.signup-btn:hover {
+    background: #2980b9;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+/* Profile Section */
+.navbar-profile {
+    position: relative;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.profile-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.profile-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.profile-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.profile-toggle i {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    transition: transform 0.3s ease;
+}
+
+.profile-toggle:hover i {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        left: 0;
+    }
+
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-center {
+        display: none;
+    }
+
+    .navbar-actions {
+        margin-right: 0.5rem;
+    }
+
+    .action-btn {
+        padding: 0.5rem;
+    }
+
+    .action-btn span {
+        display: none;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .menu-toggle {
+        padding: 0.5rem;
+    }
+}
+
+/* Animation for navbar items */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-item, .action-btn {
+    animation: slideDown 0.3s ease forwards;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.action-btn:nth-child(1) { animation-delay: 0.2s; }
+.action-btn:nth-child(2) { animation-delay: 0.3s; }

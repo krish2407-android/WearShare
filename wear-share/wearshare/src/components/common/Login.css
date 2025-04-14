@@ -1,0 +1,100 @@
+/* Overall page layout */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 400px;
+  background-color: #EAEAEA;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.form {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+label {
+  font-weight: bold;
+  color: black;
+  /* margin-bottom: 8px; */
+  display: block;
+}
+
+input[type="text"], 
+input[type="password"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Checkbox alignment */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Buttons */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkgreen;
+}
+
+/* Links and navigation */
+.inputdiv p, a {
+  font-size: 0.9rem;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Flexbox for link layout */
+.inputdiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.inputdiv a {
+  margin-left: 10px;
+}

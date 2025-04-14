@@ -1,0 +1,130 @@
+.view-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.addresses-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.addresses-section h2,
+.selected-address-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.address-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.address-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.address-card.selected {
+  border: 2px solid #ff3f6c;
+  background-color: #fff5f7;
+}
+
+.address-type-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.address-details h3,
+.selected-address-details h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.address-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.selected-address-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.selected-address-card {
+  background: #fff5f7;
+  border: 1px solid #ff3f6c;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.selected-address-details p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.selected-address-details strong {
+  color: #666;
+  margin-right: 5px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.error {
+  color: #ff4444;
+  padding: 20px;
+  text-align: center;
+  background: #ffebee;
+  border-radius: 8px;
+}
+
+.no-addresses {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .view-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-address-section {
+    position: static;
+  }
+} 

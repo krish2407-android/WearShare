@@ -1,0 +1,112 @@
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.profile-card h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.profile-info {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-group label {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.info-group p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.edit-profile-btn,
+.change-password-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-profile-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.edit-profile-btn:hover {
+    background-color: #357abd;
+}
+
+.change-password-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.change-password-btn:hover {
+    background-color: #218838;
+}
+
+.profile-loading,
+.profile-error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.profile-error {
+    color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 1rem auto;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+    .edit-profile-btn,
+    .change-password-btn {
+        width: 100%;
+    }
+} 
