@@ -1,160 +1,88 @@
 import React from "react";
-// import "./WearNavbar.css";
-// import "../../components/user/WearSidebar.css";
-import "../../components/WearNavbar.css";
+import { Link } from "react-router-dom";
 import hamburgermenu from "../../../src/assets/hamburgermenu.png";
-
+import "../../components/WearNavbar.css";
 
 export const WearNavbar = ({ toggleSidebar }) => {
   const handleToggle = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault();
     toggleSidebar();
   };
 
   return (
-    <nav className="app-header navbar navbar-expand bg-body">
-      {/*begin::Container*/}
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
       <div className="container-fluid">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <button
-              className="nav-link btn btn-light"
-              type="button"
-              style={{
-                color: "black",
-                padding: "5px 10px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-                background: "none",
-                cursor: "pointer"
-              }}
-              onClick={handleToggle}
-            >
-              <img src={hamburgermenu} style={{height:"25px",width:"25px"}} alt="menu" />
-            </button>
-          </li>
-         <li className="nav-item d-none d-md-block">
-            <a href="/wear/home" className="nav-link">
-              Home
-            </a>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/wear/men" className="nav-link">
-              Men
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#">Shirts</a>
-              </li>
-              <li>
-                <a href="#">T-Shirts</a>
-              </li>
-              <li>
-                <a href="#">Jeans</a>
-              </li>
-              <li>
-                <a href="#">Jackets</a>
-              </li>
-            </ul>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/wear/women" className="nav-link">
-              Women
-            </a>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/wear/kids" className="nav-link">
-              Kids
-            </a>
-          </li>
-        
-      
+        {/* Sidebar toggle button */}
+        <button
+          className="btn btn-outline-light me-3"
+          onClick={handleToggle}
+          style={{ border: "none", background: "transparent" }}
+        >
+          <img
+            src={hamburgermenu}
+            alt="Menu"
+            style={{ height: "25px", width: "25px" }}
+          />
+        </button>
 
-        {/* Right-aligned login/signup */}
-        
-        </ul>
+        {/* Brand */}
+        <Link className="navbar-brand fw-bold fs-4 text-white" to="/wear/home">
+  WearShare
+</Link>
 
-        {/* <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              data-widget="navbar-search"
-              href="#"
-              role="button"
-            ><ul className="navbar-nav ms-auto">
-            <li className="nav-item d-none d-md-block">
-             <a href="/login" className="nav-link">
-                Login
-              </a>
+        {/* Toggler for responsive navbar */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#wearNavbarContent"
+          aria-controls="wearNavbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+
+        {/* Navbar content */}
+        <div className="collapse navbar-collapse" id="wearNavbarContent">
+          {/* Left nav */}
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link to="/wear/home" className="nav-link text-white">
+                Home
+              </Link>
             </li>
-            <li className="nav-item d-none d-md-block">
-              <a href="/signup" className="nav-link">
-                Signup
-              </a>
+            <li className="nav-item">
+              <Link to="/wear/men" className="nav-link text-white">
+                Men
+              </Link>
             </li>
-         </ul>
-              <i className="bi bi-search" />
-            </a>
-          </li>
+            <li className="nav-item">
+              <Link to="/wear/women" className="nav-link text-white">
+                Women
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/wear/kids" className="nav-link text-white">
+                Kids
+              </Link>
+            </li>
           </ul>
-       */}
-        
-        
-  
-  
-      {/* begin::Container */}
-    
-          
-          {/* <li className="nav-item d-none d-md-block">
-            <a href="/" className="nav-link">
-              Home
-            </a>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/men" className="nav-link">
-              Men
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#">Shirts</a>
-              </li>
-              <li>
-                <a href="#">T-Shirts</a>
-              </li>
-              <li>
-                <a href="#">Jeans</a>
-              </li>
-              <li>
-                <a href="#">Jackets</a>
-              </li>
-            </ul>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/women" className="nav-link">
-              Women
-            </a>
-          </li>
-          <li className="nav-item d-none d-md-block">
-            <a href="/kids" className="nav-link">
-              Kids
-            </a>
-          </li>
-        
-       */}
 
-        {/* Right-aligned login/signup */}
-         {/* <ul className="navbar-nav ms-auto">
-           <li className="nav-item d-none d-md-block">
-            <a href="/login" className="nav-link">
-               Login
-             </a>
-           </li>
-           <li className="nav-item d-none d-md-block">
-             <a href="/signup" className="nav-link">
-               Signup
-             </a>
-           </li>
-        </ul> */}
+          {/* Optional right nav */}
+          {/* <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link to="/login" className="nav-link text-white">
+                Login
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signup" className="nav-link text-white">
+                Signup
+              </Link>
+            </li>
+          </ul> */}
+        </div>
       </div>
     </nav>
   );

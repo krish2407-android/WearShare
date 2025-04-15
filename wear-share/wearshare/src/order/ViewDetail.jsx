@@ -61,6 +61,7 @@ const ViewDetail = () => {
 
             const response = await axios.post('/order/addorder/', orderData);
             toast.success("🎉 Order placed successfully!", { autoClose: 3000 });
+            
 
             const shippingData = {
                 orderId: response.data.data._id,
@@ -70,6 +71,8 @@ const ViewDetail = () => {
 
             await axios.post('/shipping/addshipping', shippingData);
             toast.success("📦 Shipping info added", { autoClose: 3000 });
+
+            // navigate("/wear/buy");
         } catch (err) {
             toast.error('❌ Failed to place order. Please try again.', { autoClose: 3000 });
         }
@@ -150,9 +153,9 @@ const ViewDetail = () => {
                                                             checked={selectedAddress === address._id}
                                                             onChange={(e) => setSelectedAddress(e.target.value)}
                                                         />
-                                                        <label className="form-check-label fw-bold ms-2" htmlFor={address._id}>
+                                                        {/* <label className="form-check-label fw-bold ms-2" htmlFor={address._id}>
                                                             {address.addressType || 'Home'}
-                                                        </label>
+                                                        </label> */}
                                                     </div>
                                                     <p className="mb-1 mt-2"><i className="bi bi-geo-alt-fill me-2"></i>{address.addressURL}</p>
                                                     <small className="text-muted">Pincode: {address.pincode}</small>
@@ -177,6 +180,7 @@ const ViewDetail = () => {
                             </div>
 
                             <button type="submit" className="btn btn-success w-100">Place Order</button>
+                            {/* <RazorpayPayment/> */}
                         </form>
                     </div>
                 </div>

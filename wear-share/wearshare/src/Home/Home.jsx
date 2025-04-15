@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-// import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported in your main index.js or App.js
 
 // Axios instance
 const api = axios.create({
@@ -37,7 +36,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await api.get('/product/getproduct');
+        const response = await axios.get('/product/getproduct');
         setProducts(response.data?.data || []);
       } catch (err) {
         setError('Failed to fetch products');
@@ -67,7 +66,7 @@ export const Home = () => {
         imageURL: product.imageURL
       };
 
-      const response = await api.post('/cart/add', cartItem);
+      const response = await axios.post('/cart/add', cartItem);
       if (response.data) alert('Product added to cart successfully!');
     } catch (err) {
       alert('Failed to add product to cart.');
@@ -123,15 +122,24 @@ export const Home = () => {
                     <p className="card-text fw-bold mb-3">₹{product.price}</p>
                     <div className="mt-auto">
                       <button
-                        className="btn w-100 mb-2"
-                        style={{ backgroundColor: '#87CEEB', color: 'white' }}
+                        className="btn"
+                        style={{
+                          backgroundColor: 'rgb(52, 152, 219)',
+                          color: 'white',
+                          width: '100%',
+                          marginBottom: '10px',
+                        }}
                         onClick={() => handleOrderNow(product)}
                       >
                         Order Now
                       </button>
                       <button
-                        className="btn w-100"
-                        style={{ backgroundColor: '#87CEEB', color: 'white' }}
+                        className="btn"
+                        style={{
+                          backgroundColor: 'rgb(52, 152, 219)',
+                          color: 'white',
+                          width: '100%',
+                        }}
                         onClick={() => addToCart(product)}
                       >
                         Add to Cart

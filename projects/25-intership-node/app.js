@@ -90,6 +90,11 @@ const OrderRoutes = require("./src/routes/OrderRoutes");
 app.use("/order",OrderRoutes)
 
 
+
+const BuyRoutes = require ("./src/routes/BuyRoutes");
+app.use("/buy",BuyRoutes)
+
+
 mongoose.connect("mongodb://127.0.0.1:27017/25_node_internship").then(()=>{
     console.log("database connected....")
 })

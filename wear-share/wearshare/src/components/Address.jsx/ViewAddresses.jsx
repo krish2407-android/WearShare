@@ -86,12 +86,7 @@ export const ViewAddresses = () => {
                 {/* <p className="address-pincode">Pincode: {address.pincode}</p> */}
               </div>
               <div className="address-actions">
-                <button 
-                  className="edit-btn"
-                  onClick={() => navigate(`/editaddress/${address._id}`)}
-                >
-                  Edit
-                </button>
+                
                 <button 
                   className="delete-btn"
                   onClick={() => handleDeleteAddress(address._id)}

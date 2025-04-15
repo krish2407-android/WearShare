@@ -24,9 +24,9 @@ export const Login = () => {
           theme: "light",
           transition: Bounce,
         });
-
+       console.log(res)
         localStorage.setItem("id", res.data.data._id);
-        localStorage.setItem("name", res.data.data.roleId.name);
+        localStorage.setItem("name", res.data.data.firstName);
 
         if (res.data.data.roleId.role === "user") {
           navigate("/wear/home");

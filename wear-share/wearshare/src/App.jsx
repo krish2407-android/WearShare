@@ -24,7 +24,7 @@ import { MenPage } from './Men/MenPage'
 import { WomenPage } from './Women/WomenPage'
 import { KidsPage } from './kids/KidsPage'
 import ViewDetail from './order/ViewDetail'
-import BuyPage from './order/BuyPage'
+
 import { Home } from './Home/Home'
 import { Subcategory } from './Admin panel/Subcategory'
 import { AddProduct } from './Admin panel/AddProduct'
@@ -48,6 +48,7 @@ import Dashboard from './Admin panel/Dashboard'
 import {  Resetpass } from './components/common/Resetpass'
 import { Forgotpass } from './components/common/ForgotPass'
 import { Chart } from './Chart'
+import { BuyPage } from './Buy/BuyPage'
 
 // import { Landing } from './components/Landing form/Landing'
 // import { Welcome } from './components/common/Welcome'
@@ -75,7 +76,8 @@ function App() {
   
 
   return (
-    <div className={location.pathname === "/login" || location.pathname === "/signup" ? "" :"app-wrapper" }>
+    // <div className={location.pathname === "/login" || location.pathname === "/signup" ? "" :"app-wrapper" }>
+    <div className={location.pathname === "/login" || location.pathname === "/signup" ? "" :"" }>
         
       
         

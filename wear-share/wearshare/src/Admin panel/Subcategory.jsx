@@ -33,9 +33,10 @@ export const Subcategory = () => {
     try {
       const response = await axiosInstance.post('/subcategory/addsubcategory', {
         name: subcategoryName,
-        category,
+        
+        CategoryId:category
       });
-
+       console.log(response)
       if (response.status === 201) {
         toast.success('✨ Subcategory added successfully!');
         setSubcategoryName('');
@@ -84,9 +85,9 @@ export const Subcategory = () => {
               onChange={(e) => setCategory(e.target.value)}
             >
               <option value="">Select a category</option>
-              <option value="men">Men</option>
-              <option value="women">Women</option>
-              <option value="kids">Kids</option>
+              <option value="67d04fed96da78132a68c962">Men</option>
+              <option value="67d0500396da78132a68c966">Women</option>
+              <option value="67d04ff796da78132a68c964">Kids</option>
             </select>
             {errors.category && (
               <div className="invalid-feedback">{errors.category}</div>

@@ -38,21 +38,21 @@ export const UserSidebar = () => {
 
           <nav className="p-3 flex-grow-1">
             <ul className="nav flex-column">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/user/dashboard" className={`nav-link text-white ${isActive('/user/dashboard') ? 'active' : ''}`}>
                   <i className="bi bi-box-seam me-2"></i> Dashboard
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/user/subcategory" className={`nav-link text-white ${isActive('/user/subcategory') ? 'active' : ''}`}>
                   <i className="bi bi-grid-3x3-gap me-2"></i> Add Subcategory
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/user/chart" className={`nav-link text-white ${isActive('/user/subcategory') ? 'active' : ''}`}>
                   <i className="bi bi-grid-3x3-gap me-2"></i> chart
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/user/addproduct" className={`nav-link text-white ${isActive('/user/addproduct') ? 'active' : ''}`}>
                   <i className="bi bi-box-seam me-2"></i> Add Product
@@ -63,11 +63,11 @@ export const UserSidebar = () => {
                   <i className="bi bi-box-seam me-2"></i> Product List
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/user/addform" className={`nav-link text-white ${isActive('/user/addproduct') ? 'active' : ''}`}>
                   <i className="bi bi-box-seam me-2"></i> Add Productform
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/user/admin" className={`nav-link text-white ${isActive('/user/admin') ? 'active' : ''}`}>
                   <i className="bi bi-person-plus me-2"></i> Add Admin
