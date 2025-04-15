@@ -12,8 +12,8 @@ export const Landing = () => {
             <h1 className="display-4 fw-bold mb-3">👚 Welcome to Wear-Share</h1>
             <p className="lead mb-4">Share fashion. Borrow style. Connect through clothes.</p>
             <div className="d-flex justify-content-center flex-wrap gap-3">
-              <Link to="/login" className="btn btn-light text-primary btn-lg px-4 fw-semibold">Get Started</Link>
-              <Link to="/register" className="btn btn-outline-light btn-lg px-4">Learn More</Link>
+              <Link to="/login" className="btn btn-light text-primary btn-lg px-4 fw-semibold">Get Shopping</Link>
+              <Link to="/signup" className="btn btn-outline-light btn-lg px-4">Learn More</Link>
             </div>
           </section>
 
