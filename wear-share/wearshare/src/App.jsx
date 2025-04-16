@@ -49,6 +49,8 @@ import {  Resetpass } from './components/common/Resetpass'
 import { Forgotpass } from './components/common/ForgotPass'
 import { Chart } from './Chart'
 import { BuyPage } from './Buy/BuyPage'
+import PaymentSuccess from './order/PaymentSuccess'
+import ThankYou from './order/ThankYou'
 
 // import { Landing } from './components/Landing form/Landing'
 // import { Welcome } from './components/common/Welcome'
@@ -139,6 +141,8 @@ function App() {
           {/* <Route path='orderhistory' element={<OrderHistory></OrderHistory>}></Route> */}
 <Route path='orderhistory' element={<OrderHistory></OrderHistory>}></Route>  
           {/* <Route path='changepassword' element={<ChangePassword></ChangePassword>}></Route> */}
+          <Route path="/wear/payment-success" element={<PaymentSuccess />} />
+          <Route path="/wear/thank-you" element={<ThankYou />} />
          
           
           
