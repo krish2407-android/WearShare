@@ -71,7 +71,7 @@ export const Landing = () => {
       <div className="col-md-4 mb-4">
         <h5 className="fw-bold">Contact Us</h5>
         <p>Email: support@wearshare.com</p>
-        <p>Phone: +91 98765 43210</p>
+        <p>Phone: +91 832033121554</p>
       </div>
     </div>
     <div className="text-center border-top pt-3 mt-3">

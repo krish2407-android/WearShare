@@ -38,11 +38,11 @@ export const UserSidebar = () => {
 
           <nav className="p-3 flex-grow-1">
             <ul className="nav flex-column">
-              {/* <li className="nav-item">
-                <Link to="/user/dashboard" className={`nav-link text-white ${isActive('/user/dashboard') ? 'active' : ''}`}>
+              <li className="nav-item">
+                <Link to="/user" className={`nav-link text-white ${isActive('/user/dashboard') ? 'active' : ''}`}>
                   <i className="bi bi-box-seam me-2"></i> Dashboard
                 </Link>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <Link to="/user/subcategory" className={`nav-link text-white ${isActive('/user/subcategory') ? 'active' : ''}`}>
                   <i className="bi bi-grid-3x3-gap me-2"></i> Add Subcategory
